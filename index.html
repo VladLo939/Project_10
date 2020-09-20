@@ -20,7 +20,7 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="([А-ЯЁ]{1}[а-яё]+)(-[А-Я]{1}[а-яё]+)?" placeholder="Имя" minlength="2" maxlength="20" required />
+                        <input class="form__input" type="text" name="name" pattern="(([А-ЯЁ]|[а-яё]){1}[а-яё]+)(-([А-ЯЁ]|[а-яё]){1}[а-яё]+)?" placeholder="Имя" minlength="2" maxlength="20" required />
                     </div>
                     <div class="form__field">
                         <input class="form__input" type="text" name="email" pattern="[a-zA-Z0-9]+(-[a-zA-Z0-9]+)?@([a-zA-Z0-9-]+\.){1,2}[a-zA-Z0-9]+" placeholder="E-Mail" required />
@@ -31,7 +31,7 @@
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="url" pattern="(http|https):\/{2}(([-a-zA-Z0-9]+\.[a-z]+(\.[a-z]+)?)|(\d\.\d\.\d\.\d:\d{4}))(:|\/)?(\d+\/?)?([a-z\/]+)?#?" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="text" name="url" pattern="(http|https):\/{2}(([-a-zA-Z0-9]+\.[a-z]+(\.[a-z]+)?)|(\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\b\.\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\b\.\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\b\.\b(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\b))(:|\/)?(\d{2,6}\/?)?([a-z\/]+\b)?(\/|#)?" placeholder="Ваш сайт" required/>
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="text">Отправить</button>
